@@ -1,0 +1,13 @@
+Disney
+/home
+/series
+/movies
+/login
+/wachlist
+/search
+
+Netflix
+/browse
+/browse/series
+/browse/movies
+/browse/my-list
