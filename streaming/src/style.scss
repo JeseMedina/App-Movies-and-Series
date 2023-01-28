@@ -25,6 +25,22 @@ body {
     margin: auto;
 }
 
+.header {
+    padding: 0 3%;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem calc($img-gap * 2 + $handle-size);
+    align-items: center;
+
+    .title {
+        font-size: 2.5rem;
+        margin: 0;
+        padding: 0;
+        padding: .5rem 0;
+
+    }
+}
+
 header {
     padding: 15px 0;
     background-color: $black;
@@ -101,7 +117,7 @@ header {
             margin-bottom: 1.25em;
         }
 
-        a{
+        a {
             text-decoration: none;
         }
 
@@ -229,7 +245,7 @@ main {
             font-size: 2rem;
             margin: 0;
             padding: 0;
-            padding: .5rem 0 ;
+            padding: .5rem 0;
 
         }
 
@@ -270,7 +286,7 @@ main {
         }
 
         .slider {
-            --items-per-screen: 5;
+            --items-per-screen: 4;
             --slider-index: 0;
             display: flex;
             flex-grow: 1;
@@ -280,7 +296,7 @@ main {
 
 
             &>img {
-                max-width: 20%;
+                max-width: 25%;
                 flex: 0 0 calc(100 / var(--items-per-screen));
                 width: calc(100 / var(--items-per-screen));
                 aspect-ratio: 16/9;
@@ -316,7 +332,7 @@ main {
             justify-content: center;
             color: $white;
             line-height: 0;
-            transition: background-color 150ms ease-in-out;
+            transition: font-size 150ms ease-in-out;
 
 
             left-handle {
@@ -343,7 +359,6 @@ main {
 
             &:hover,
             &:focus {
-                background-color: rgba(255, 255, 255, .5);
                 font-size: 2.5rem;
 
                 &.text {
@@ -354,6 +369,34 @@ main {
             }
 
         }
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 0.5rem 3.5rem;
+
+    &>img {
+        max-width: 100%;
+        flex: 0 0 calc(100 / var(--items-per-screen));
+        width: calc(100 / var(--items-per-screen));
+        aspect-ratio: 16/9;
+        padding: $img-gap;
+        border-radius: .1rem;
+        cursor: pointer;
+        transition: .3s ease all;
+        z-index: 10;
+
+        &:hover {
+            position: relative;
+            padding: 0;
+            transform: scale(1);
+            z-index: 1;
+        }
+
     }
 }
 

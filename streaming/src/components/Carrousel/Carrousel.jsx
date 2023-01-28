@@ -36,7 +36,6 @@ function Carrousel({ name, link, mediaType }) {
                 <div className="slider">
                     {
                         content.map((item) => {
-                            console.log(item)
                             let imgSrc = 'https://image.tmdb.org/t/p/w500' + item.backdrop_path;
                             let media_type = item.media_type;
                             let id = item.id
