@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import { movieOrSerie } from '../../functions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInfoCircle, faPlay } from '@fortawesome/free-solid-svg-icons';
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -17,7 +19,7 @@ const media_type = info.media_type;
 const id = info.id
 const url = movieOrSerie(media_type) + id;
 
-function Header() {
+function HeaderHome() {
     return (
         <>
             <div className="main-movie" style={{ background: `url(${poster}) no-repeat center`, backgroundSize: 'cover' }}>
@@ -26,9 +28,9 @@ function Header() {
                     <p className="description">{info.overview}</p>
                     <div className="buttons">
                         <button
-                            className="button"><i className="fa-solid fa-play"></i> Reproducir</button>
+                            className="button"><FontAwesomeIcon icon={faPlay} /> Reproducir</button>
                         <Link to={url} className="button">
-                            <i className="fa-solid fa-circle-info"></i> Más información
+                            <FontAwesomeIcon icon={faInfoCircle} />  Más información
                         </Link>
                     </div>
                 </div>
@@ -37,4 +39,4 @@ function Header() {
     )
 }
 
-export default Header
+export default HeaderHome
