@@ -1,9 +1,10 @@
 import HeaderMovie from '../../components/Header/HeaderMovie'
+import DataSheet from '../../components/DataSheet/DataSheet'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from "react";
 import Layout from '../Layout'
-
-
+import Cast from '../../components/DataSheet/Cast';
+import Carrousel from '../../components/Carrousel/Carrousel'
 
 function Movie() {
     const params = useParams()
@@ -15,7 +16,7 @@ function Movie() {
         async function getContent() {
             const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es`)
             const data = await response.json();
-            setContent(data); 
+            setContent(data);
         }
         getContent();
     }, [])
@@ -23,12 +24,19 @@ function Movie() {
     return (
         <Layout>
             {
-                content ? 
-                <HeaderMovie title={content.title || content.name} link={id} backdrop={content.backdrop_path}/>
-                :
-                'cargado'
+                content ?
+                    <>
+                        <HeaderMovie content={content} />
+                        <main className="container">
+                            <DataSheet content={content} />
+                            <Cast content={content} />
+                        </main>
+                        <Carrousel name={'Similar'} link={`https://api.themoviedb.org/3/movie/${id}/similar?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es`} mediaType={''} />
+                    </>
+                    :
+                    'cargado'
             }
-            
+
         </Layout>
     )
 }
