@@ -1,4 +1,4 @@
-import { movieOrSerie } from '../../functions';
+import { movieOrTv } from '../../functions';
 
 
 function DataSheet({ content }) {

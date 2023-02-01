@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { movieOrSerie } from "../../functions";
+import { movieOrTv } from "../../functions";
 
 function Grid({ name, link, mediaType }) {
     const [content, setContent] = useState([])
@@ -28,10 +28,10 @@ function Grid({ name, link, mediaType }) {
                             let url;
                             if (mediaType === 'movies') {
                                 url = '/movies/' + id;
-                            } else if (mediaType === 'series') {
-                                url = '/series/' + id;
+                            } else if (mediaType === 'tvs') {
+                                url = '/tvs/' + id;
                             } else {
-                                url = movieOrSerie(media_type) + id;
+                                url = movieOrTv(media_type) + id;
                             }
 
                         if (item.backdrop_path != null) {

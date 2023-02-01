@@ -7,7 +7,7 @@ function Navbar() {
                 <nav>
                     <NavLink to="/home" className="active nav-link">Home</NavLink>
                     <NavLink to="/movies" className="nav-link">Movies</NavLink>
-                    <NavLink to="/series" className="nav-link">Series</NavLink>
+                    <NavLink to="/tvs" className="nav-link">Tvs</NavLink>
                     <NavLink to="/watchlist" className="nav-link">WatchList</NavLink>
                     <NavLink to="/search" className="nav-link">Serch</NavLink>
                 </nav>

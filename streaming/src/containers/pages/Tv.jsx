@@ -6,15 +6,15 @@ import Layout from '../Layout'
 import Cast from '../../components/DataSheet/Cast';
 import Carrousel from '../../components/Carrousel/Carrousel'
 
-function Movie() {
+function Tv() {
     const params = useParams()
-    const id = params.movie_id
+    const id = params.tv_id
 
     const [content, setContent] = useState();
 
     useEffect(() => {
         async function getContent() {
-            const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es`)
+            const response = await fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es`)
             const data = await response.json();
             setContent(data);
         }
@@ -28,7 +28,7 @@ function Movie() {
                     <>
                         <HeaderContent content={content} />
 
-                        <Carrousel name={'Similar'} link={`https://api.themoviedb.org/3/movie/${id}/similar?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es`} mediaType={'movies'} />
+                        <Carrousel name={'Similar'} link={`https://api.themoviedb.org/3/tv/${id}/similar?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es`} mediaType={'tvs'} />
                     </>
                     :
                     'cargado'
@@ -38,10 +38,10 @@ function Movie() {
     )
 }
 
-export default Movie
+export default Tv
 
 const xd = `
 <main className="container">
-                            <DataSheet content={content} mediaType={'movies'}/>
-                            <Cast content={content} />
-                        </main> `
+                            <DataSheet content={content} />
+                            <Cast content={content} mediaType={'tv'}/>
+                        </main>`

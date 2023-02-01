@@ -1,8 +1,9 @@
 import Error404 from './containers/errors/Error404';
 import Home from './containers/pages/Home';
 import Movies from './containers/pages/Movies';
-import Series from './containers/pages/Series';
 import Movie from './containers/pages/Movie';
+import Tvs from './containers/pages/Tvs';
+import Tv from './containers/pages/Tv';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import './style.scss';
 
@@ -19,9 +20,9 @@ function App() {
           {/* Movies */}
           <Route path="/movies" element={<Movies />} />
           <Route path="/movies/:movie_id" element={<Movie />} />
-          {/* Series */}
-          <Route path="/series" element={<Series />} />
-          {/* <Route path="/series/:serie_id" element={<Serie />} /> */}
+          {/* Tvs */}
+          <Route path="/tvs" element={<Tvs />} />
+          <Route path="/tvs/:tv_id" element={<Tv />} />
           {/* Search */}
           {/* <Route path="/search/:term" element={<Search />} /> */}
           {/* Watchlist */}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Cast({ content }) {
+function Cast({ content, mediaType}) {
 
     const [cast, setCast] = useState([])
 
