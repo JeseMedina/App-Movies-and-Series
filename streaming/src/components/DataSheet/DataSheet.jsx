@@ -1,6 +1,4 @@
-import { movieOrTv } from '../../functions';
-
-
+import { getDate } from "../../functions";
 function DataSheet({ content }) {
 
     return (
@@ -19,7 +17,7 @@ function DataSheet({ content }) {
                     <div className="data-title">
                         Lanzamiento:
                     </div>
-                    <div className="data-description">{content.release_date.split('-')[0]}</div>
+                    <div className="data-description">{getDate(content)}</div>
                     <div className="data-title">
                         Calificacion (TMDB):
                     </div>

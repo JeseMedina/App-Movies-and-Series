@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { movieOrTv } from '../../functions';
+import { moviesOrTvs } from '../../functions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle, faPlay } from '@fortawesome/free-solid-svg-icons';
 
@@ -17,7 +17,7 @@ const info = trending.results[getRandomInt(19)]
 const poster = `https://www.themoviedb.org/t/p/w1280${info.backdrop_path}`;
 const media_type = info.media_type;
 const id = info.id
-const url = movieOrTv(media_type) + id;
+const url = moviesOrTvs(media_type) + id;
 
 function HeaderHome() {
     return (

@@ -27,7 +27,10 @@ function Movie() {
                 content ?
                     <>
                         <HeaderContent content={content} />
-
+                        <main className="container">
+                            <DataSheet content={content} mediaType={'movies'} />
+                            <Cast content={content} mediaType={'movies'}/>
+                        </main>
                         <Carrousel name={'Similar'} link={`https://api.themoviedb.org/3/movie/${id}/similar?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es`} mediaType={'movies'} />
                     </>
                     :
@@ -39,9 +42,3 @@ function Movie() {
 }
 
 export default Movie
-
-const xd = `
-<main className="container">
-                            <DataSheet content={content} mediaType={'movies'}/>
-                            <Cast content={content} />
-                        </main> `

@@ -27,7 +27,10 @@ function Tv() {
                 content ?
                     <>
                         <HeaderContent content={content} />
-
+                        <main className="container">
+                            <DataSheet content={content} />
+                            <Cast content={content} mediaType={'tvs'}/>
+                        </main>
                         <Carrousel name={'Similar'} link={`https://api.themoviedb.org/3/tv/${id}/similar?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es`} mediaType={'tvs'} />
                     </>
                     :
@@ -39,9 +42,3 @@ function Tv() {
 }
 
 export default Tv
-
-const xd = `
-<main className="container">
-                            <DataSheet content={content} />
-                            <Cast content={content} mediaType={'tv'}/>
-                        </main>`

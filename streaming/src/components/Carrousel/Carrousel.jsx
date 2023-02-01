@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { movieOrTv } from "../../functions";
+import { moviesOrTvs } from "../../functions";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { calculateProgressBar, onHandleClick, throttle } from "./CarrouselFunctions";
@@ -45,7 +45,7 @@ function Carrousel({ name, link, mediaType }) {
                             } else if (mediaType === 'tvs') {
                                 url = '/tvs/' + id;
                             } else {
-                                url = movieOrTv(media_type) + id;
+                                url = moviesOrTvs(media_type) + id;
                             }
 
 
