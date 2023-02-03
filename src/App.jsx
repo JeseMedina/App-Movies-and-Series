@@ -5,13 +5,12 @@ import Movie from './containers/pages/Movie';
 import Tvs from './containers/pages/Tvs';
 import Tv from './containers/pages/Tv';
 import Search from './containers/pages/Search';
-import {
-	BrowserRouter as Router,
-	Route,
-	Routes,
-	Navigate,
-} from 'react-router-dom';
+import Login from './containers/pages/Login';
+import Signup from './containers/pages/Signup'
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './style.scss';
+
+
 
 function App() {
 	return (
@@ -34,6 +33,10 @@ function App() {
 					<Route path="/search/:term" element={<Search />} />
 					{/* Watchlist */}
 					{/* <Route path="/watchlist" element={<WatchList />} /> */}
+					{/* Login */}
+					<Route path="/login" element={<Login />} />
+					{/* Signup */}
+					<Route path="/signup" element={<Signup/>} />
 				</Routes>
 			</Router>
 		</>

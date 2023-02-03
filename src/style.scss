@@ -18,6 +18,131 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	color: $white;
 }
+.background{
+		width: 100%;
+		height: 100vh;
+		background-image: url(https://cutewallpaper.org/22/live-action-films-wallpapers/3093311848.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	
+	.login {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(1);
+	width: 380px;
+	padding: 20px 30px;
+	background-color: $white;
+	box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .15);
+	border-radius: 10px;
+
+	.form {
+			h2 {
+					text-align: center;
+					color: $black;
+					margin: 10px 0px 20px;
+					font-size: 25px;
+			}
+			.error {
+				color: #dc3545;
+				text-align: center;
+			}
+
+			.form-element {
+					margin: 15px 0px;
+
+					label {
+							font-size: 14px;
+							color: $black;
+					}
+
+					& input[type="text"],
+					& input[type="password"] {
+							margin-top: 5px;
+							display: block;
+							width: 100%;
+							padding: 10px;
+							outline: none;
+							border: 1px solid #aaa;
+							border-radius: 5px;
+					}
+
+					button {
+							width: 100%;
+							height: 40px;
+							border: none;
+							outline: none;
+							font-size: 16px;
+							background: $black;
+							color: $white;
+							border-radius: 10px;
+							cursor: pointer;
+					}
+			}
+	}
+
+
+}
+
+	.login {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+		width: 380px;
+		padding: 20px 30px;
+		background-color: $white;
+		box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .15);
+		border-radius: 10px;
+	
+		.form {
+				h2 {
+						text-align: center;
+						color: $black;
+						margin: 10px 0px 20px;
+						font-size: 25px;
+				}
+	
+				.form-element {
+						margin: 15px 0px;
+	
+						label {
+								font-size: 14px;
+								color: $black;
+						}
+	
+						& input[type="text"],
+						& input[type="password"] {
+								margin-top: 5px;
+								display: block;
+								width: 100%;
+								padding: 10px;
+								outline: none;
+								border: 1px solid #aaa;
+								border-radius: 5px;
+						}
+	
+						button {
+								width: 100%;
+								height: 40px;
+								border: none;
+								outline: none;
+								font-size: 16px;
+								background: $black;
+								color: $white;
+								border-radius: 10px;
+								cursor: pointer;
+						}
+				}
+		}
+	
+	
+	}
+}
+
 
 .container {
 	width: 100%;
@@ -66,7 +191,7 @@ header {
 			}
 		}
 
-		.login {
+		.user {
 			font-size: 1.5rem;
 			cursor: pointer;
 

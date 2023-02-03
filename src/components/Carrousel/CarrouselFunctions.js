@@ -3,12 +3,8 @@ export function calculateProgressBar(progressBar) {
 	progressBar.innerHTML = '';
 	const slider = progressBar.closest('.row').querySelector('.slider');
 	const itemCount = slider.children.length;
-	const itemsPerScreen = parseInt(
-		getComputedStyle(slider).getPropertyValue('--items-per-screen')
-	);
-	let sliderIndex = parseInt(
-		getComputedStyle(slider).getPropertyValue('--slider-index')
-	);
+	const itemsPerScreen = parseInt(getComputedStyle(slider).getPropertyValue('--items-per-screen'));
+	let sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue('--slider-index'));
 	const progressBarItemCount = Math.ceil(itemCount / itemsPerScreen);
 
 	if (sliderIndex >= progressBarItemCount) {
@@ -29,9 +25,7 @@ export function calculateProgressBar(progressBar) {
 export function onHandleClick(handle) {
 	const progressBar = handle.closest('.row').querySelector('.progress-bar');
 	const slider = handle.closest('.carousel').querySelector('.slider');
-	const sliderIndex = parseInt(
-		getComputedStyle(slider).getPropertyValue('--slider-index')
-	);
+	const sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue('--slider-index'));
 
 	const progressBarItemCount = progressBar.children.length;
 	if (handle.classList.contains('left-handle')) {

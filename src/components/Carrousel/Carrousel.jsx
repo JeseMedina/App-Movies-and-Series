@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react';
 import { moviesOrTvs } from '../../functions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-	faChevronLeft,
-	faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 function Carrousel({ name, link, mediaType }) {
 	const [content, setContent] = useState([]);
@@ -36,8 +33,7 @@ function Carrousel({ name, link, mediaType }) {
 				</button>
 				<div className="slider">
 					{content.map(item => {
-						const imgSrc =
-							'https://image.tmdb.org/t/p/w500' + item.backdrop_path;
+						const imgSrc = 'https://image.tmdb.org/t/p/w500' + item.backdrop_path;
 						const mediaTypes = item.media_type;
 						const id = item.id;
 						let url;

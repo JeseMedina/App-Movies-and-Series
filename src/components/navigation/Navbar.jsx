@@ -21,7 +21,7 @@ function Navbar() {
 						Serch
 					</NavLink>
 				</nav>
-				<div className="login">
+				<div className="user">
 					<a>
 						Jesé
 						<i className="fa-solid fa-skull"></i>

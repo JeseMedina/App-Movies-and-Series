@@ -16,9 +16,7 @@ function DataSheet({ content }) {
 					<div className="data-title">Lanzamiento:</div>
 					<div className="data-description">{getDate(content)}</div>
 					<div className="data-title">Calificacion (TMDB):</div>
-					<div className="data-description">
-						{content.vote_average.toFixed(1) + '/10'}
-					</div>
+					<div className="data-description">{content.vote_average.toFixed(1) + '/10'}</div>
 				</div>
 			</div>
 		</>
