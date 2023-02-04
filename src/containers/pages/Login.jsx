@@ -13,12 +13,13 @@ function Login() {
 		}
 		e.preventDefault();
 		const users = JSON.parse(localStorage.getItem('users')) || [];
-		const userFinded = users.find(u => u.user === user);
-		if (!userFinded) {
+		if (users.user !== user) {
 			setError('User not found');
 		}
 
-		if (userFinded.password === password) {
+		if (users.password === password) {
+			localStorage.setItem('users', JSON.stringify(users));
+			sessionStorage.setItem('isLoggedIn',true)
 			window.location.href = '/';
 		} else {
 			setError('Incorrect password');

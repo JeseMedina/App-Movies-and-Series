@@ -7,15 +7,16 @@ function Signup() {
 	const [password2, setPassword2] = useState('');
 	const [error, setError] = useState('');
 
+	const watchList = []
+
 	const handleSignup = () => {
 		if (user === '' || password === '' || password2 === '') {
 			setError('Fill in all the fields');
 			return;
 		}
 		if (password === password2) {
-			const users = JSON.parse(localStorage.getItem('users')) || [];
-			users.push({ user, password });
-			localStorage.setItem('users', JSON.stringify(users));
+			localStorage.setItem('users', JSON.stringify({ user, password,watchList }));
+			sessionStorage.setItem('isLoggedIn',false)
 			window.location.href = '/login';
 		} else {
 			setError('Passwords do not match');

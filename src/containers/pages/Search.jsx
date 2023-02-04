@@ -1,8 +1,11 @@
 import Layout from '../Layout';
 import GridSearch from '../../components/Grid/GridSearch';
 import { useState, useEffect } from 'react';
+import { redirectIfLoggedOut } from '../../functions';
 
 function Search() {
+	redirectIfLoggedOut();
+	
 	const [content, setContent] = useState();
 	const [search, setSearch] = useState();
 	const [loading, setLoading] = useState(false);

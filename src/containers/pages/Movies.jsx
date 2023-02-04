@@ -1,7 +1,10 @@
 import Layout from '../Layout';
 import Grid from '../../components/Grid/Grid';
+import { redirectIfLoggedOut } from '../../functions';
 
 function Movies() {
+	redirectIfLoggedOut();
+	
 	return (
 		<Layout>
 			<Grid

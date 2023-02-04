@@ -1,8 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faPlay } from '@fortawesome/free-solid-svg-icons';
 
-function HeaderContent({ content }) {
+function HeaderContent({ content, mediaType }) {
 	const poster = `https://www.themoviedb.org/t/p/w1280${content.backdrop_path}`;
+
+	const handleAddToWatchList = e => {
+		const users = JSON.parse(localStorage.getItem('users'))
+		users.watchList.push(`${mediaType}/${content.id}`)
+		localStorage.setItem('users', JSON.stringify( users ));
+	}
 
 	return (
 		<div
@@ -16,7 +22,7 @@ function HeaderContent({ content }) {
 				<h3 className="title">{content.title || content.name}</h3>
 
 				<div className="buttons">
-					<button role="button" className="button">
+					<button role="button" className="button" onClick={handleAddToWatchList}>
 						<FontAwesomeIcon icon={faPlusCircle} /> Agregar a mi lista
 					</button>
 					{/* Link to video */}

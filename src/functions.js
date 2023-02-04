@@ -21,3 +21,14 @@ export function getDate(content) {
 		return content.first_air_date.split('-')[0];
 	}
 }
+
+export function redirectIfLoggedOut() {
+	const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
+	if (!isLoggedIn) {
+		window.location.href = '/login'
+	}
+}
+
+export function capitalizeFirstLetter(str) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}

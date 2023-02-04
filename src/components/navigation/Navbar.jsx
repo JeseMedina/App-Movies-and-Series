@@ -1,11 +1,14 @@
 import { NavLink } from 'react-router-dom';
+import { capitalizeFirstLetter } from '../../functions';
 
 function Navbar() {
+	const userName = capitalizeFirstLetter(JSON.parse(localStorage.getItem('users')).user)
+
 	return (
 		<header>
 			<div className="container">
 				<nav>
-					<NavLink to="/home" className="nav-link">
+					<NavLink to="/" className="nav-link">
 						Home
 					</NavLink>
 					<NavLink to="/movies" className="nav-link">
@@ -23,7 +26,7 @@ function Navbar() {
 				</nav>
 				<div className="user">
 					<a>
-						Jesé
+						{userName}
 						<i className="fa-solid fa-skull"></i>
 					</a>
 				</div>

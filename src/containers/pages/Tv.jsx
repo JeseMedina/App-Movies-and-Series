@@ -5,8 +5,11 @@ import { useEffect, useState } from 'react';
 import Layout from '../Layout';
 import Cast from '../../components/DataSheet/Cast';
 import Carrousel from '../../components/Carrousel/Carrousel';
+import { redirectIfLoggedOut } from '../../functions';
 
 function Tv() {
+	redirectIfLoggedOut();
+	
 	const params = useParams();
 	const id = params.tv_id;
 
@@ -27,7 +30,7 @@ function Tv() {
 		<Layout>
 			{content ? (
 				<>
-					<HeaderContent content={content} />
+					<HeaderContent content={content} mediaType={'tv'}/>
 					<main className="container">
 						<DataSheet content={content} />
 						<Cast content={content} mediaType={'tvs'} />

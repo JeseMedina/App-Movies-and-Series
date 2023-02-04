@@ -1,8 +1,11 @@
 import Layout from '../Layout';
 import HeaderHome from '../../components/Header/HeaderHome';
 import Carrousel from '../../components/Carrousel/Carrousel';
+import { redirectIfLoggedOut } from '../../functions';
 
 function Home() {
+	redirectIfLoggedOut();
+	
 	return (
 		<Layout>
 			<HeaderHome />

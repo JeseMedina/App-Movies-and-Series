@@ -5,8 +5,11 @@ import { useEffect, useState } from 'react';
 import Layout from '../Layout';
 import Cast from '../../components/DataSheet/Cast';
 import Carrousel from '../../components/Carrousel/Carrousel';
+import { redirectIfLoggedOut } from '../../functions';
 
 function Movie() {
+	redirectIfLoggedOut();
+
 	const params = useParams();
 	const id = params.movie_id;
 
@@ -27,7 +30,7 @@ function Movie() {
 		<Layout>
 			{content ? (
 				<>
-					<HeaderContent content={content} />
+					<HeaderContent content={content} mediaType={'movie'}/>
 					<main className="container">
 						<DataSheet content={content} mediaType={'movies'} />
 						<Cast content={content} mediaType={'movies'} />
