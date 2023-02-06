@@ -9,7 +9,7 @@ function getRandomInt(max) {
 
 const getTrending = async () => {
 	const response = await fetch(
-		'https://api.themoviedb.org/3/trending/all/day?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es'
+		'https://api.themoviedb.org/3/trending/all/day?api_key=c4ded25acda802a0e1f075a5f5eab9db'
 	);
 	return response.json();
 };

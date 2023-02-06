@@ -14,7 +14,7 @@ function Search() {
 		async function getContent() {
 			setLoading(true);
 			const response = await fetch(
-				`https://api.themoviedb.org/3/search/multi?api_key=c4ded25acda802a0e1f075a5f5eab9db&query=${search}&page=1&language=es`
+				`https://api.themoviedb.org/3/search/multi?api_key=c4ded25acda802a0e1f075a5f5eab9db&query=${search}&page=1`
 			);
 			const data = await response.json();
 			setContent(data.results);

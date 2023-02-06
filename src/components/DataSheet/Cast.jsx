@@ -9,7 +9,7 @@ function Cast({ content, mediaType }) {
 			const response = await fetch(
 				`https://api.themoviedb.org/3/${movieOrTv(mediaType)}/${
 					content.id
-				}/credits?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es`
+				}/credits?api_key=c4ded25acda802a0e1f075a5f5eab9db`
 			);
 			const data = await response.json();
 			setCast(data.cast);
@@ -21,9 +21,9 @@ function Cast({ content, mediaType }) {
 	return (
 		<>
 			<div className="cast">
-				<h3>Reparto</h3>
+				<h3>Cast</h3>
 				<div className="cards">
-					{cast.slice(0, 12).map(item => {
+					{cast.slice(0, 8).map(item => {
 						let img;
 						if (item.profile_path === null) {
 							img =

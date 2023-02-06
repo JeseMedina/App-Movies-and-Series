@@ -18,7 +18,7 @@ function Movie() {
 	useEffect(() => {
 		async function getContent() {
 			const response = await fetch(
-				`https://api.themoviedb.org/3/movie/${id}?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es`
+				`https://api.themoviedb.org/3/movie/${id}?api_key=c4ded25acda802a0e1f075a5f5eab9db`
 			);
 			const data = await response.json();
 			setContent(data);
@@ -37,7 +37,7 @@ function Movie() {
 					</main>
 					<Carrousel
 						name={'Similar'}
-						link={`https://api.themoviedb.org/3/movie/${id}/similar?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es`}
+						link={`https://api.themoviedb.org/3/movie/${id}/similar?api_key=c4ded25acda802a0e1f075a5f5eab9db`}
 						mediaType={'movies'}
 					/>
 				</>

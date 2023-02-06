@@ -25,6 +25,7 @@ function Carrousel({ name, link, mediaType }) {
 					<div className="progress-item"></div>
 					<div className="progress-item"></div>
 					<div className="progress-item"></div>
+					<div className="progress-item"></div>
 				</div>
 			</div>
 			<div className="carousel">

@@ -18,73 +18,13 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	color: $white;
 }
-.background{
-		width: 100%;
-		height: 100vh;
-		background-image: url(https://cutewallpaper.org/22/live-action-films-wallpapers/3093311848.jpg);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	
-	.login {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	opacity: 1;
-	transform: translate(-50%, -50%) scale(1);
-	width: 380px;
-	padding: 20px 30px;
-	background-color: $white;
-	box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .15);
-	border-radius: 10px;
-
-	.form {
-			h2 {
-					text-align: center;
-					color: $black;
-					margin: 10px 0px 20px;
-					font-size: 25px;
-			}
-			.error {
-				color: #dc3545;
-				text-align: center;
-			}
-
-			.form-element {
-					margin: 15px 0px;
-
-					label {
-							font-size: 14px;
-							color: $black;
-					}
-
-					& input[type="text"],
-					& input[type="password"] {
-							margin-top: 5px;
-							display: block;
-							width: 100%;
-							padding: 10px;
-							outline: none;
-							border: 1px solid #aaa;
-							border-radius: 5px;
-					}
-
-					button {
-							width: 100%;
-							height: 40px;
-							border: none;
-							outline: none;
-							font-size: 16px;
-							background: $black;
-							color: $white;
-							border-radius: 10px;
-							cursor: pointer;
-					}
-			}
-	}
-
-
-}
+.background {
+	width: 100%;
+	height: 100vh;
+	background-image: url(https://cutewallpaper.org/22/live-action-films-wallpapers/3093311848.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
 	.login {
 		position: absolute;
@@ -95,54 +35,109 @@ body {
 		width: 380px;
 		padding: 20px 30px;
 		background-color: $white;
-		box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .15);
+		box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.15);
 		border-radius: 10px;
-	
+
 		.form {
-				h2 {
-						text-align: center;
-						color: $black;
-						margin: 10px 0px 20px;
-						font-size: 25px;
+			h2 {
+				text-align: center;
+				color: $black;
+				margin: 10px 0px 20px;
+				font-size: 25px;
+			}
+			.error {
+				color: #dc3545;
+				text-align: center;
+			}
+
+			.form-element {
+				margin: 15px 0px;
+
+				label {
+					font-size: 14px;
+					color: $black;
 				}
-	
-				.form-element {
-						margin: 15px 0px;
-	
-						label {
-								font-size: 14px;
-								color: $black;
-						}
-	
-						& input[type="text"],
-						& input[type="password"] {
-								margin-top: 5px;
-								display: block;
-								width: 100%;
-								padding: 10px;
-								outline: none;
-								border: 1px solid #aaa;
-								border-radius: 5px;
-						}
-	
-						button {
-								width: 100%;
-								height: 40px;
-								border: none;
-								outline: none;
-								font-size: 16px;
-								background: $black;
-								color: $white;
-								border-radius: 10px;
-								cursor: pointer;
-						}
+
+				& input[type='text'],
+				& input[type='password'] {
+					margin-top: 5px;
+					display: block;
+					width: 100%;
+					padding: 10px;
+					outline: none;
+					border: 1px solid #aaa;
+					border-radius: 5px;
 				}
+
+				button {
+					width: 100%;
+					height: 40px;
+					border: none;
+					outline: none;
+					font-size: 16px;
+					background: $black;
+					color: $white;
+					border-radius: 10px;
+					cursor: pointer;
+				}
+			}
 		}
-	
-	
+	}
+
+	.login {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+		width: 380px;
+		padding: 20px 30px;
+		background-color: $white;
+		box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.15);
+		border-radius: 10px;
+
+		.form {
+			h2 {
+				text-align: center;
+				color: $black;
+				margin: 10px 0px 20px;
+				font-size: 25px;
+			}
+
+			.form-element {
+				margin: 15px 0px;
+
+				label {
+					font-size: 14px;
+					color: $black;
+				}
+
+				& input[type='text'],
+				& input[type='password'] {
+					margin-top: 5px;
+					display: block;
+					width: 100%;
+					padding: 10px;
+					outline: none;
+					border: 1px solid #aaa;
+					border-radius: 5px;
+				}
+
+				button {
+					width: 100%;
+					height: 40px;
+					border: none;
+					outline: none;
+					font-size: 16px;
+					background: $black;
+					color: $white;
+					border-radius: 10px;
+					cursor: pointer;
+				}
+			}
+		}
 	}
 }
-
 
 .container {
 	width: 100%;
@@ -198,7 +193,7 @@ header {
 			a {
 				color: $gray;
 				text-decoration: none;
-				margin-right: .1rem;
+				margin-right: 1rem;
 
 				&:hover {
 					color: $white;
@@ -210,7 +205,7 @@ header {
 			}
 
 			button {
-				padding: .2rem;
+				padding: 0.2rem;
 				border: 0.1rem solid $white;
 				background-color: $black;
 				color: $white;
@@ -339,15 +334,13 @@ main {
 		}
 	}
 
-	// !Hacer grid
 	.cast {
 		padding: 30px 0 0;
 
 		.cards {
-			padding: 0 0 30px;
 			display: grid;
-			grid-template-columns: repeat(6, 15%);
-			grid-gap: 0 2%;
+			gap: 0.5rem;
+			grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 
 			.card {
 				align-content: center;
@@ -515,9 +508,9 @@ main {
 
 .grid {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-gap: 10px;
-	grid-auto-rows: minmax(100px, auto);
+	gap: 0.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+
 	padding: 0.5rem 3.5rem;
 
 	& > img {
@@ -530,6 +523,7 @@ main {
 		cursor: pointer;
 		transition: 0.3s ease all;
 		z-index: 10;
+		margin: auto;
 
 		&:hover {
 			position: relative;
@@ -568,75 +562,12 @@ main {
 	}
 }
 
-@media (max-width: 1000px) {
-	.row .carousel {
-		height: 45%;
-
-		.slider {
-			--items-per-screen: 4;
-		}
-	}
-}
-
-@media screen and (max-width: 900px) {
+// MEDIAS
+@media (max-width: 1200px) {
 	.row .carousel {
 		height: 40%;
-
-		.slider {
-			--items-per-screen: 4;
-
-			& > img {
-				max-width: 25%;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 800px) {
-	header {
-		.container {
-			flex-direction: column;
-			text-align: center;
-			gap: .5rem;
-
-			.login {
-				align-self: flex-end;
-				margin-bottom: 1rem;
-			}
-		}
-	}
-
-	.movie-cover {
-		.selected-movie,
-		.main-movie {
-			font-size: 14px;
-
-			.description {
-				min-width: 100%;
-			}
-		}
-	}
-
-	main .cast .cards {
-		grid-template-columns: repeat(4, 20%);
-		grid-gap: 5%;
-
-		.card {
-			margin-bottom: 2rem;
-
-			.img {
-				width: 100%;
-				height: 40%;
-			}
-		}
-	}
-
-	.row .carousel {
-		height: 40%;
-
 		.slider {
 			--items-per-screen: 3;
-
 			& > img {
 				max-width: 33.33333%;
 			}
@@ -644,42 +575,35 @@ main {
 	}
 }
 
-@media (max-width: 640px) {
-	.row {
-		.header {
-			flex-direction: column;
-			align-items: flex-start;
+@media (max-width: 900px) {
+	.row .carousel {
+		height: 50%;
+		.slider {
+			--items-per-screen: 1;
 
-			.progress-bar {
-				flex-wrap: wrap;
+			& > img {
+				max-width: 50%;
 			}
 		}
+	}
+	.selected-movie,
+	.main-movie .description {
+		min-width: 100%;
+	}
+}
 
-		.carousel {
-			height: 50%;
-
-			.slider {
-				--items-per-screen: 2;
-
-				& > img {
-					max-width: 50%;
-				}
-			}
+@media (max-width: 640px) {
+	.row .carousel .slider {
+		--items-per-screen: 1;
+		& > img {
+			max-width: 100%;
 		}
 	}
 }
 
-@media (max-width: 500px) {
-	.row .carousel {
-		height: 60%;
-
-		.slider {
-			--items-per-screen: 3;
-		}
-	}
-
-	.movie-cover .main-movie .container,
-	.movie-cover .selected-movie .container {
+@media (max-width: 553px) {
+	.main-movie,
+	.selected-movie .container {
 		.title {
 			margin-top: 1em;
 			text-align: center;
@@ -692,16 +616,13 @@ main {
 
 			.button {
 				margin-top: 0.5rem;
+				display: inline-block;
+				text-align: center;
 			}
 		}
 	}
 
 	main {
-		.cast .cards {
-			grid-template-columns: repeat(3, 32%);
-			grid-gap: 2%;
-		}
-
 		.info {
 			flex-direction: column;
 			align-content: center;
@@ -717,37 +638,26 @@ main {
 		}
 	}
 
-	.row .carousel .slider {
-		--items-per-screen: 1;
-
-		& > img {
-			max-width: 100%;
-		}
-	}
-}
-
-@media (max-width: 400px) {
 	header {
 		.container {
 			nav {
 				display: flex;
 				flex-direction: column;
 				align-content: center;
-				margin: 0 auto; 
+				margin: 0 auto;
 				text-align: center;
 				a {
 					margin: auto;
 					margin-top: 0.5rem;
 				}
 			}
-			.user{
+			.user {
 				flex-direction: column;
 				align-content: center;
-				.userName{
+				.userName {
 					display: none;
 				}
 			}
-			
 		}
 	}
 }

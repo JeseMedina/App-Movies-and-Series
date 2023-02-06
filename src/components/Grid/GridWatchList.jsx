@@ -8,7 +8,7 @@ function GridWatchList({ list }) {
       const tempArray = [];
       for (const item of list) {
         const response = await fetch(
-          `https://api.themoviedb.org/3/${item}?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es`
+          `https://api.themoviedb.org/3/${item}?api_key=c4ded25acda802a0e1f075a5f5eab9db`
         );
         const data = await response.json();
         tempArray.push(data);

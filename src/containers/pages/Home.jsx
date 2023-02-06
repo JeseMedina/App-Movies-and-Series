@@ -12,14 +12,14 @@ function Home() {
 			<Carrousel
 				name={'Trending'}
 				link={
-					'https://api.themoviedb.org/3/trending/all/day?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es'
+					'https://api.themoviedb.org/3/trending/all/day?api_key=c4ded25acda802a0e1f075a5f5eab9db'
 				}
 				mediaType={''}
 			/>
 			<Carrousel
 				name={'Movies'}
 				link={
-					'https://api.themoviedb.org/3/movie/popular?api_key=c4ded25acda802a0e1f075a5f5eab9db&language=es'
+					'https://api.themoviedb.org/3/movie/popular?api_key=c4ded25acda802a0e1f075a5f5eab9db'
 				}
 				mediaType={'movies'}
 			/>
