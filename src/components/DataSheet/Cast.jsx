@@ -21,7 +21,7 @@ function Cast({ content, mediaType }) {
 	return (
 		<>
 			<div className="cast">
-				<h3>Cast</h3>
+				<h2>Cast</h2>
 				<div className="cards">
 					{cast.slice(0, 8).map(item => {
 						let img;

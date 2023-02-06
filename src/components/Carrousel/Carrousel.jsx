@@ -20,13 +20,13 @@ function Carrousel({ name, link, mediaType }) {
 		<div className="row">
 			<div className="header">
 				<h3 className="title">{name}</h3>
-				<div className="progress-bar">
+				{/* <div className="progress-bar">
 					<div className="progress-item active"></div>
 					<div className="progress-item"></div>
 					<div className="progress-item"></div>
 					<div className="progress-item"></div>
 					<div className="progress-item"></div>
-				</div>
+				</div> */}
 			</div>
 			<div className="carousel">
 				<button className="handle left-handle">

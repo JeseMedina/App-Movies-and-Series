@@ -30,7 +30,7 @@ function Login() {
 		<div className="background">
 			<div className="login">
 				<div className="form">
-					<h2>Login</h2>
+					<h1>Login</h1>
 					{error && <p className="error">{error}</p>}
 					<div className="form-element">
 						<label>User</label>

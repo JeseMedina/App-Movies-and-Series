@@ -19,7 +19,7 @@ function HeaderContent({ content, mediaType }) {
 			}}
 		>
 			<div className="container">
-				<h3 className="title">{content.title || content.name}</h3>
+				<h1 className="title">{content.title || content.name}</h1>
 
 				<div className="buttons">
 					<button role="button" className="button" onClick={handleAddToWatchList}>

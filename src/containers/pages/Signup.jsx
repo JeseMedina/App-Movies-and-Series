@@ -27,7 +27,7 @@ function Signup() {
 		<div className="background">
 			<div className="login">
 				<div className="form">
-					<h2>SignUp</h2>
+					<h1>SignUp</h1>
 					{error && <p className="error">{error}</p>}
 					<div className="form-element">
 						<label>User</label>

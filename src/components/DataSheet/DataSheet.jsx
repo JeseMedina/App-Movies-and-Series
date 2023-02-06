@@ -4,11 +4,11 @@ function DataSheet({ content }) {
 		<>
 			<div className="info">
 				<div className="synopsis">
-					<h3>Sinopsis</h3>
+					<h2>Sinopsis</h2>
 					<p>{content.overview}</p>
 				</div>
 				<div className="data-sheet">
-					<h3>Data Sheet</h3>
+					<h2>Data Sheet</h2>
 					<div className="data-title">Genre:</div>
 					<div className="data-description">
 						{content.genres?.map(({ name }) => name).join(', ') || ''}

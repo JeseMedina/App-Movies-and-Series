@@ -32,7 +32,7 @@ function HeaderHome() {
 				}}
 			>
 				<div className="container">
-					<h3 className="title">{info.name || info.title}</h3>
+					<h1 className="title">{info.name || info.title}</h1>
 					<p className="description">{info.overview}</p>
 					<div className="buttons">
 						<button className="button">
