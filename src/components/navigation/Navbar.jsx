@@ -2,7 +2,12 @@ import { NavLink } from 'react-router-dom';
 import { capitalizeFirstLetter } from '../../functions';
 
 function Navbar() {
-	const userName = capitalizeFirstLetter(JSON.parse(localStorage.getItem('users')).user)
+	const userName = capitalizeFirstLetter(JSON.parse(localStorage.getItem('users')).user);
+
+	const handleLogout = () => {
+		sessionStorage.setItem('isLoggedIn', false);
+		document.location.href = '/login';
+	};
 
 	return (
 		<header>
@@ -25,10 +30,8 @@ function Navbar() {
 					</NavLink>
 				</nav>
 				<div className="user">
-					<a>
-						{userName}
-						<i className="fa-solid fa-skull"></i>
-					</a>
+					<a className="userName">{userName}</a>
+					<button onClick={handleLogout}>LogOut</button>
 				</div>
 			</div>
 		</header>
