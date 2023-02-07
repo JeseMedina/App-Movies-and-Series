@@ -2,10 +2,11 @@ import Layout from '../Layout';
 import GridSearch from '../../components/Grid/GridSearch';
 import { useState, useEffect } from 'react';
 import { redirectIfLoggedOut } from '../../functions';
+import { BeatLoader } from 'react-spinners';
 
 function Search() {
 	redirectIfLoggedOut();
-	
+
 	const [content, setContent] = useState();
 	const [search, setSearch] = useState();
 	const [loading, setLoading] = useState(false);
@@ -45,7 +46,9 @@ function Search() {
 				{search && <button onClick={() => setSearch('')}>X</button>}
 			</div>
 			{loading ? (
-				<div className="loading">Loading...</div>
+				<div className="load">
+					<BeatLoader color="#fff" />
+				</div>
 			) : (
 				search && <GridSearch content={content} />
 			)}

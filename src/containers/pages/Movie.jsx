@@ -6,6 +6,7 @@ import Layout from '../Layout';
 import Cast from '../../components/DataSheet/Cast';
 import Carrousel from '../../components/Carrousel/Carrousel';
 import { redirectIfLoggedOut } from '../../functions';
+import { BeatLoader } from 'react-spinners';
 
 function Movie() {
 	redirectIfLoggedOut();
@@ -30,7 +31,7 @@ function Movie() {
 		<Layout>
 			{content ? (
 				<>
-					<HeaderContent content={content} mediaType={'movie'}/>
+					<HeaderContent content={content} mediaType={'movie'} />
 					<main className="container">
 						<DataSheet content={content} mediaType={'movies'} />
 						<Cast content={content} mediaType={'movies'} />
@@ -42,7 +43,9 @@ function Movie() {
 					/>
 				</>
 			) : (
-				'cargado'
+				<div className="load">
+					<BeatLoader color="#fff" />
+				</div>
 			)}
 		</Layout>
 	);

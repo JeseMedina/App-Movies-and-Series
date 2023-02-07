@@ -117,7 +117,6 @@ header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
 		nav {
 			a {
 				color: $gray;
@@ -140,6 +139,7 @@ header {
 				color: $gray;
 				text-decoration: none;
 				margin-right: 1rem;
+				vertical-align: middle;
 
 				&:hover {
 					color: $white;
@@ -338,114 +338,29 @@ main {
 			padding: 0;
 			padding: 0.5rem 0;
 		}
-
-		.progress-bar {
-			display: flex;
-			gap: 0.5rem;
-
-			.progress-item {
-				flex: 0 0 1.5rem;
-				min-width: 1.5rem;
-				height: 0.5rem;
-				background-color: rgba(255, 255, 255, 0.5);
-
-				&.active {
-					background-color: $white;
-				}
-			}
-		}
 	}
-
-	.carousel {
-		display: flex;
-		justify-content: center;
-		overflow: hidden;
-
-		&:hover {
-			.handle {
-				visibility: visible;
-			}
-
-			& > .progress-bar {
-				visibility: visible;
-			}
-		}
-
-		.slider {
-			--items-per-screen: 4;
-			--slider-index: 0;
-			display: flex;
-			flex-grow: 1;
-			margin: 0 $img-gap;
-			transform: translateX(calc(var(--slider-index) * -100%));
-			transition: transform 250ms ease-in-out;
-
-			& > img {
-				max-width: 25%;
-				flex: 0 0 calc(100 / var(--items-per-screen));
-				width: calc(100 / var(--items-per-screen));
-				aspect-ratio: 16/9;
-				padding: $img-gap;
-				border-radius: 0.1rem;
-				cursor: pointer;
-				transition: 0.3s ease all;
-				z-index: 10;
-
-				&:hover {
-					position: relative;
-					padding: 0;
-					transform: scale(1);
-					z-index: 1;
-				}
-			}
-		}
-
-		.handle {
-			visibility: hidden;
-			border: none;
-			flex-grow: 0;
-			flex-shrink: 0;
-			background-color: rgba(0, 0, 0, 0.25);
-			z-index: 10;
-			margin: $img-gap 0;
-			width: $handle-size;
-			cursor: pointer;
-			font-size: 2rem;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: $white;
-			line-height: 0;
-			transition: font-size 150ms ease-in-out;
-
-			left-handle {
-				border-top-left-radius: 0;
-				border-bottom-left-radius: 0;
-
-				&:hover::after {
-					content: \2039;
-				}
-			}
-
-			rigth-handle {
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;
-
-				&:hover::after {
-					content: \203A;
-				}
-			}
-
-			.text {
-				transition: transform 150ms ease-in-out;
-			}
-
-			&:hover,
-			&:focus {
-				font-size: 2.5rem;
-
-				&.text {
-					transform: scale(1, 2);
+	.carrousel {
+		padding: 0 3%;
+		.slick-slider .slick-list {
+			justify-content: space-between;
+			.slick-track {
+				.slick-slide {
+					padding: 0 0.35rem;
+					div {
+						img {
+							border-radius: 0.1rem;
+							cursor: pointer;
+							transition: 0.3s ease all;
+							z-index: 10;
+							&:hover {
+								position: relative;
+								padding: 0;
+								transform: scale(0.98);
+								z-index: 1;
+								box-shadow: 0 8px 16px 0 rgba($color: $white, $alpha: 0.2);
+							}
+						}
+					}
 				}
 			}
 		}
@@ -508,44 +423,49 @@ main {
 	}
 }
 
-// MEDIAS
-@media (max-width: 1200px) {
-	.row .carousel {
-		height: 40%;
-		.slider {
-			--items-per-screen: 3;
-			& > img {
-				max-width: 33.33333%;
-			}
-		}
-	}
+.load {
+	display: flex;
+	justify-content: center;
 }
 
-@media (max-width: 900px) {
-	.row .carousel {
-		height: 50%;
-		.slider {
-			--items-per-screen: 1;
+// MEDIAS
+// @media (max-width: 1200px) {
+// 	.row .carousel {
+// 		height: 40%;
+// 		.slider {
+// 			--items-per-screen: 3;
+// 			& > img {
+// 				max-width: 33.33333%;
+// 			}
+// 		}
+// 	}
+// }
 
-			& > img {
-				max-width: 50%;
-			}
-		}
-	}
+@media (max-width: 900px) {
+	// .row .carousel {
+	// 	height: 50%;
+	// 	.slider {
+	// 		--items-per-screen: 2;
+
+	// 		& > img {
+	// 			max-width: 50%;
+	// 		}
+	// 	}
+	// }
 	.selected-movie,
 	.main-movie .description {
 		min-width: 100%;
 	}
 }
 
-@media (max-width: 640px) {
-	.row .carousel .slider {
-		--items-per-screen: 1;
-		& > img {
-			max-width: 100%;
-		}
-	}
-}
+// @media (max-width: 640px) {
+// 	.row .carousel .slider {
+// 		--items-per-screen: 1;
+// 		& > img {
+// 			max-width: 100%;
+// 		}
+// 	}
+// }
 
 @media (max-width: 553px) {
 	.main-movie,
@@ -586,6 +506,7 @@ main {
 
 	header {
 		.container {
+			flex-direction: column;
 			nav {
 				display: flex;
 				flex-direction: column;
@@ -598,8 +519,7 @@ main {
 				}
 			}
 			.user {
-				flex-direction: column;
-				align-content: center;
+				margin-top: 0.5rem;
 				.userName {
 					display: none;
 				}

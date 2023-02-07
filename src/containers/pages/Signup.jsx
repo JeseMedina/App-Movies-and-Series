@@ -7,7 +7,7 @@ function Signup() {
 	const [password2, setPassword2] = useState('');
 	const [error, setError] = useState('');
 
-	const watchList = []
+	const watchList = [];
 
 	const handleSignup = () => {
 		if (user === '' || password === '' || password2 === '') {
@@ -15,8 +15,8 @@ function Signup() {
 			return;
 		}
 		if (password === password2) {
-			localStorage.setItem('users', JSON.stringify({ user, password,watchList }));
-			sessionStorage.setItem('isLoggedIn',false)
+			localStorage.setItem('users', JSON.stringify({ user, password, watchList }));
+			sessionStorage.setItem('isLoggedIn', false);
 			window.location.href = '/login';
 		} else {
 			setError('Passwords do not match');

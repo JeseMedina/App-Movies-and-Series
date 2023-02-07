@@ -25,7 +25,7 @@ export function getDate(content) {
 export function redirectIfLoggedOut() {
 	const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
 	if (!isLoggedIn) {
-		window.location.href = '/login'
+		window.location.href = '/login';
 	}
 }
 

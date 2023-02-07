@@ -9,7 +9,7 @@ function WatchList() {
 
 	return (
 		<Layout>
-			<GridWatchList list={list}/>
+			<GridWatchList list={list} />
 		</Layout>
 	);
 }

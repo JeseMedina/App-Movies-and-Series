@@ -6,10 +6,11 @@ import Layout from '../Layout';
 import Cast from '../../components/DataSheet/Cast';
 import Carrousel from '../../components/Carrousel/Carrousel';
 import { redirectIfLoggedOut } from '../../functions';
+import { BeatLoader } from 'react-spinners';
 
 function Tv() {
 	redirectIfLoggedOut();
-	
+
 	const params = useParams();
 	const id = params.tv_id;
 
@@ -30,7 +31,7 @@ function Tv() {
 		<Layout>
 			{content ? (
 				<>
-					<HeaderContent content={content} mediaType={'tv'}/>
+					<HeaderContent content={content} mediaType={'tv'} />
 					<main className="container">
 						<DataSheet content={content} />
 						<Cast content={content} mediaType={'tvs'} />
@@ -42,7 +43,9 @@ function Tv() {
 					/>
 				</>
 			) : (
-				'cargado'
+				<div className="load">
+					<BeatLoader color="#fff" />
+				</div>
 			)}
 		</Layout>
 	);

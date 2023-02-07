@@ -13,29 +13,29 @@ import './style.scss';
 
 function App() {
 	return (
-			<Router>
-				<Routes>
-					{/* Error404 */}
-					<Route path="*" element={<Error404 />} />
-					{/* Home */}
-					<Route path="/" element={<Home />} />
-					{/* Movies */}
-					<Route path="/movies" element={<Movies />} />
-					<Route path="/movies/:movie_id" element={<Movie />} />
-					{/* Tvs */}
-					<Route path="/tvs" element={<Tvs />} />
-					<Route path="/tvs/:tv_id" element={<Tv />} />
-					{/* Search */}
-					<Route path="/search" element={<Search />} />
-					<Route path="/search/:term" element={<Search />} />
-					{/* Watchlist */}
-					 <Route path="/watchlist" element={<WatchList />} />
-					{/* Login */}
-					<Route path="/login" element={<Login />} />
-					{/* Signup */}
-					<Route path="/signup" element={<Signup />} />
-				</Routes>
-			</Router>
+		<Router>
+			<Routes>
+				{/* Error404 */}
+				<Route path="*" element={<Error404 />} />
+				{/* Home */}
+				<Route path="/" element={<Home />} />
+				{/* Movies */}
+				<Route path="/movies" element={<Movies />} />
+				<Route path="/movies/:movie_id" element={<Movie />} />
+				{/* Tvs */}
+				<Route path="/tvs" element={<Tvs />} />
+				<Route path="/tvs/:tv_id" element={<Tv />} />
+				{/* Search */}
+				<Route path="/search" element={<Search />} />
+				<Route path="/search/:term" element={<Search />} />
+				{/* Watchlist */}
+				<Route path="/watchlist" element={<WatchList />} />
+				{/* Login */}
+				<Route path="/login" element={<Login />} />
+				{/* Signup */}
+				<Route path="/signup" element={<Signup />} />
+			</Routes>
+		</Router>
 	);
 }
 

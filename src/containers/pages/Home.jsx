@@ -5,7 +5,7 @@ import { redirectIfLoggedOut } from '../../functions';
 
 function Home() {
 	redirectIfLoggedOut();
-	
+
 	return (
 		<Layout>
 			<HeaderHome />
@@ -18,9 +18,7 @@ function Home() {
 			/>
 			<Carrousel
 				name={'Movies'}
-				link={
-					'https://api.themoviedb.org/3/movie/popular?api_key=c4ded25acda802a0e1f075a5f5eab9db'
-				}
+				link={'https://api.themoviedb.org/3/movie/popular?api_key=c4ded25acda802a0e1f075a5f5eab9db'}
 				mediaType={'movies'}
 			/>
 			<Carrousel

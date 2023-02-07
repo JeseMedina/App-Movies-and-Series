@@ -19,7 +19,7 @@ function Login() {
 
 		if (users.password === password) {
 			localStorage.setItem('users', JSON.stringify(users));
-			sessionStorage.setItem('isLoggedIn',true)
+			sessionStorage.setItem('isLoggedIn', true);
 			window.location.href = '/';
 		} else {
 			setError('Incorrect password');
