@@ -7,11 +7,11 @@ function Cast({ content }) {
 			<div className="cast">
 				<h2>Cast</h2>
 				<div className="cards">
-					{cast.slice(0, 8).map(item => {
+					{cast.slice(0, 12).map(item => {
 						let img;
 						if (item.profile_path === null) {
 							img =
-								'https://d3jh33bzyw1wep.cloudfront.net/s3/W1siZiIsImNvbXBpbGVkX3RoZW1lX2Fzc2V0cy9FTElHTyBSRUNSVUlUTUVOVC9wbmcvdXNlci1wcm9maWxlLWRlZmF1bHQucG5nIl1d';
+								'https://uaf.edu/experts/images/placeholder.png';
 						} else {
 							img = IMG_URL + item.profile_path;
 						}

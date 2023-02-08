@@ -1,7 +1,6 @@
 import { moviesOrTvs } from '../../functions';
 
 function Grid({ name, content, mediaType }) {
-	console.log(content);
 	return (
 		<>
 			<div className="header">

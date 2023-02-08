@@ -4,6 +4,8 @@ import Movies from './containers/pages/Movies';
 import Movie from './containers/pages/Movie';
 import Tvs from './containers/pages/Tvs';
 import Tv from './containers/pages/Tv';
+import Seasons from './containers/pages/Seasons';
+import Episodes from './containers/pages/Episodes';
 import Search from './containers/pages/Search';
 import Login from './containers/pages/Login';
 import Signup from './containers/pages/Signup';
@@ -25,6 +27,8 @@ function App() {
 				{/* Tvs */}
 				<Route path="/tvs" element={<Tvs />} />
 				<Route path="/tvs/:tv_id" element={<Tv />} />
+				<Route path="/tvs/:tv_id/seasons" element={<Seasons />} />
+				<Route path="/tvs/:tv_id/seasons/:season" element={<Episodes />} />
 				{/* Search */}
 				<Route path="/search" element={<Search />} />
 				<Route path="/search/:term" element={<Search />} />

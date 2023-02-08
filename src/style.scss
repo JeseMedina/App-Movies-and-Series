@@ -303,28 +303,27 @@ main {
 
 		.cards {
 			display: grid;
-			gap: 0.5rem;
-			grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-			height: 75%;
+			gap: 0.6rem;
+			grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
 
 			.card {
 				width: 100%;
+				text-decoration: none;
+				color: $white;
+				border-radius: 2rem;
+
+				&:hover {
+					box-shadow: 0 0.5rem 1rem 0 rgba($color: $white, $alpha: 0.2);
+				}
 
 				img {
 					width: 100%;
-					height: 60%;
-					gap: 0.313rem;
 					transition: 0.3s;
-					border-radius: 2rem;
-					object-fit: cover;
-
-					&:hover {
-						box-shadow: 0 0.5rem 1rem 0 rgba($color: $white, $alpha: 0.2);
-					}
+					border-radius: 2rem 2rem 0 0;
 				}
 
 				.card-container {
-					padding: 0.125rem 1rem;
+					padding: 1rem 1rem;
 					text-align: center;
 
 					.actor {
