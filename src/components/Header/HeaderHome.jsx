@@ -36,10 +36,10 @@ function HeaderHome() {
 					<p className="description">{info.overview}</p>
 					<div className="buttons">
 						<button className="button">
-							<FontAwesomeIcon icon={faPlay} /> Reproducir
+							<FontAwesomeIcon icon={faPlay} /> Play
 						</button>
 						<Link to={url} className="button">
-							<FontAwesomeIcon icon={faInfoCircle} /> Más información
+							<FontAwesomeIcon icon={faInfoCircle} /> More Info.
 						</Link>
 					</div>
 				</div>

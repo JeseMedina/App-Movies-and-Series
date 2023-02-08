@@ -22,11 +22,11 @@ function HeaderContent({ content, mediaType }) {
 				<h1 className="title">{content.title || content.name}</h1>
 				<div className="buttons">
 					<button role="button" className="button" onClick={handleAddToWatchList}>
-						<FontAwesomeIcon icon={faPlusCircle} /> Agregar a mi lista
+						<FontAwesomeIcon icon={faPlusCircle} /> Add to WatchList
 					</button>
 					{/* Link to video */}
 					<button role="button" className="button">
-						<FontAwesomeIcon icon={faPlay} /> Reproducir
+						<FontAwesomeIcon icon={faPlay} /> Play
 					</button>
 				</div>
 			</div>

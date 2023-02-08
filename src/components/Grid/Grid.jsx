@@ -1,19 +1,7 @@
-import { useEffect, useState } from 'react';
 import { moviesOrTvs } from '../../functions';
 
-function Grid({ name, link, mediaType }) {
-	const [content, setContent] = useState([]);
-
-	useEffect(() => {
-		async function getContent() {
-			const response = await fetch(link);
-			const data = await response.json();
-			setContent(data.results);
-		}
-
-		getContent();
-	}, []);
-
+function Grid({ name, content, mediaType }) {
+	console.log(content);
 	return (
 		<>
 			<div className="header">
