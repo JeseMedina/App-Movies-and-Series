@@ -19,7 +19,7 @@ function Movie() {
 	useEffect(() => {
 		async function getContent() {
 			const response = await fetch(
-				`https://api.themoviedb.org/3/movie/${id}?api_key=c4ded25acda802a0e1f075a5f5eab9db`
+				`https://api.themoviedb.org/3/movie/${id}?api_key=c4ded25acda802a0e1f075a5f5eab9db&append_to_response=credits`
 			);
 			const data = await response.json();
 			setContent(data);

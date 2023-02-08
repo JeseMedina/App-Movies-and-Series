@@ -10,12 +10,13 @@ function Search() {
 	const [content, setContent] = useState();
 	const [search, setSearch] = useState();
 	const [loading, setLoading] = useState(false);
+	const [page, setPage] = useState(1);
 
 	useEffect(() => {
 		async function getContent() {
 			setLoading(true);
 			const response = await fetch(
-				`https://api.themoviedb.org/3/search/multi?api_key=c4ded25acda802a0e1f075a5f5eab9db&query=${search}&page=1`
+				`https://api.themoviedb.org/3/search/multi?api_key=c4ded25acda802a0e1f075a5f5eab9db&query=${search}&page=${page}`
 			);
 			const data = await response.json();
 			setContent(data.results);
@@ -24,7 +25,7 @@ function Search() {
 		if (search) {
 			getContent();
 		}
-	}, [search]);
+	}, [search, page]);
 
 	const searchMovie = e => {
 		if (e.key === 'Enter') {
@@ -51,6 +52,15 @@ function Search() {
 				</div>
 			) : (
 				search && <GridSearch content={content} />
+			)}
+			{search && (
+				<div className="pagination">
+					<button onClick={() => setPage(page - 1)} disabled={page === 1}>
+						Previous
+					</button>
+					<span className="pag">{page}</span>
+					<button onClick={() => setPage(page + 1)}>Next</button>
+				</div>
 			)}
 		</Layout>
 	);

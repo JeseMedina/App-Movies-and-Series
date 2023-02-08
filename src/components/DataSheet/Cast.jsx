@@ -1,21 +1,5 @@
-import { useEffect, useState } from 'react';
-import { movieOrTv } from '../../functions';
-
-function Cast({ content, mediaType }) {
-	const [cast, setCast] = useState([]);
-
-	useEffect(() => {
-		async function getCast() {
-			const response = await fetch(
-				`https://api.themoviedb.org/3/${movieOrTv(mediaType)}/${
-					content.id
-				}/credits?api_key=c4ded25acda802a0e1f075a5f5eab9db`
-			);
-			const data = await response.json();
-			setCast(data.cast);
-		}
-		getCast();
-	}, []);
+function Cast({ content }) {
+	const cast = content.credits.cast;
 
 	const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 	return (

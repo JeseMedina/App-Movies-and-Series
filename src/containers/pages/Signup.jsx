@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignInAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
 function Signup() {
 	const [user, setUsuario] = useState('');
@@ -42,11 +44,17 @@ function Signup() {
 						<input type="password" value={password2} onChange={e => setPassword2(e.target.value)} />
 					</div>
 					<div className="form-element">
-						<button onClick={handleSignup}>SignUp</button>
+						<button onClick={handleSignup}>
+							<FontAwesomeIcon icon={faUserPlus} />
+							SignUp
+						</button>
 					</div>
 					<div className="form-element">
 						<Link to={'/login'}>
-							<button>Login</button>
+							<button className="outline">
+								<FontAwesomeIcon icon={faSignInAlt} />
+								Login
+							</button>
 						</Link>
 					</div>
 				</div>
