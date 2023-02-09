@@ -304,9 +304,8 @@ main {
 
 		.seasons-grid {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 			grid-gap: 1rem;
-			margin-top: 2rem;
 
 			.season {
 				text-decoration: none;
@@ -316,6 +315,9 @@ main {
 				padding: 1rem;
 				text-align: center;
 				transition: 0.3s ease all;
+				width: 100%;
+				display: flex;
+				justify-content: center;
 
 				&:hover {
 					transform: scale(1.02);
@@ -337,7 +339,7 @@ main {
 				width: 100%;
 				text-decoration: none;
 				color: $white;
-				border-radius: 2rem;
+				border-radius: 0.5rem;
 				transition: 0.3s ease all;
 
 				&:hover {
@@ -347,7 +349,7 @@ main {
 				img {
 					width: 100%;
 					transition: 0.3s;
-					border-radius: 2rem 2rem 0 0;
+					border-radius: 0.5rem 0.5rem 0 0;
 				}
 
 				.card-container {
@@ -363,6 +365,54 @@ main {
 						color: $gray;
 					}
 				}
+			}
+		}
+	}
+}
+
+.container-season {
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	.season {
+		display: flex;
+		flex-direction: column;
+		width: 25%;
+
+		h2 {
+			top: 5.5rem;
+			left: 0;
+			position: sticky;
+		}
+
+		img {
+			top: 9.5rem;
+			left: 0;
+			width: 100%;
+			height: auto;
+			border: 0.063rem solid #aaa;
+			border-radius: 0.313rem;
+			position: sticky;
+			box-shadow: 0 0.5rem 1rem 0 rgba($color: $white, $alpha: 0.2);
+		}
+	}
+
+	.episodes {
+		width: 70%;
+		padding: 1rem;
+		border-radius: 0.5rem;
+
+		.episode {
+			border-bottom: $white solid 0.002rem;
+			h3 {
+				font-size: 1.5rem;
+				margin: 0.5rem 0;
+			}
+
+			p {
+				font-size: 1rem;
+				margin-bottom: 0.5rem;
 			}
 		}
 	}
@@ -422,7 +472,6 @@ main {
 		max-width: 100%;
 		flex: 0 0 calc(100 / var(--items-per-screen));
 		width: calc(100 / var(--items-per-screen));
-		aspect-ratio: 16/9;
 		padding: $img-gap;
 		border-radius: 0.1rem;
 		cursor: pointer;
@@ -473,7 +522,7 @@ main {
 
 .footer {
 	bottom: 0;
-	padding: 3.125rem 0 0.625rem;
+	padding: 2rem 0 0.625rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -503,10 +552,57 @@ main {
 	justify-content: center;
 }
 
+// MEDIA
 @media (max-width: 900px) {
 	.selected-movie,
 	.main-movie .description {
 		min-width: 100%;
+	}
+}
+
+@media (max-width: 800px) {
+	.container-season {
+		margin-top: 1rem;
+		flex-direction: column;
+
+		.season {
+			width: 100%;
+			align-items: center;
+
+			h2 {
+				position: static;
+			}
+
+			img {
+				width: 50%;
+				position: static;
+			}
+		}
+
+		.episodes {
+			width: 100%;
+			padding: 1rem;
+			border-radius: 0.5rem;
+			display: flex;
+			flex-direction: column;
+
+			h2 {
+				align-self: center;
+			}
+
+			.episode {
+				border-bottom: $white solid 0.002rem;
+				h3 {
+					font-size: 1.5rem;
+					margin: 0.5rem 0;
+				}
+
+				p {
+					font-size: 1rem;
+					margin-bottom: 0.5rem;
+				}
+			}
+		}
 	}
 }
 

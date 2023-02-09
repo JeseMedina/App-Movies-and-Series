@@ -26,7 +26,7 @@ function App() {
 				{/* Tvs */}
 				<Route path="/tvs" element={<Tvs />} />
 				<Route path="/tvs/:tv_id" element={<Tv />} />
-				<Route path="/tvs/:tv_id/seasons/:season" element={<Season />} />
+				<Route path="/tvs/:tv_id/seasons/:season_id" element={<Season />} />
 				{/* Search */}
 				<Route path="/search" element={<Search />} />
 				<Route path="/search/:term" element={<Search />} />

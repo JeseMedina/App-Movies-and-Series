@@ -6,7 +6,11 @@ const Seasons = ({ content }) => {
 			<h2>Seasons</h2>
 			<div className="seasons-grid">
 				{content.seasons.map(season => (
-					<Link to={`/tvs/${content.id}/seasons/${season.id}`} key={season.id} className="season">
+					<Link
+						to={`/tvs/${content.id}/seasons/${season.season_number}`}
+						key={season.id}
+						className="season"
+					>
 						{season.name}
 					</Link>
 				))}
