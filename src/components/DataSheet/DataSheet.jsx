@@ -1,7 +1,9 @@
 import { getDate } from '../../functions';
 function DataSheet({ content }) {
-	const clasification = content.release_dates.results.find(item => item.iso_3166_1 === 'US')
-		.release_dates[0].certification;
+	const clasification =
+		content.release_dates &&
+		content.release_dates.results.find(item => item.iso_3166_1 === 'US').release_dates[0]
+			.certification;
 
 	return (
 		<>
@@ -27,10 +29,14 @@ function DataSheet({ content }) {
 							<div className="data-title">Qualification (TMDB)</div>
 							<div className="data-description">{content.vote_average.toFixed(1) + '/10'}</div>
 						</div>
-						<div className="group">
-							<div className="data-title">Clasification</div>
-							<div className="data-description">{clasification}</div>
-						</div>
+						{clasification ? (
+							<div className="group">
+								<div className="data-title">Clasification</div>
+								<div className="data-description">{clasification}</div>
+							</div>
+						) : (
+							<></>
+						)}
 						{content.runtime ? (
 							<div className="group">
 								<div className="data-title"> Duration</div>

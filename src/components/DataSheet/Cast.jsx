@@ -10,8 +10,7 @@ function Cast({ content }) {
 					{cast.slice(0, 12).map(item => {
 						let img;
 						if (item.profile_path === null) {
-							img =
-								'https://uaf.edu/experts/images/placeholder.png';
+							img = 'https://uaf.edu/experts/images/placeholder.png';
 						} else {
 							img = IMG_URL + item.profile_path;
 						}

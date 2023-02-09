@@ -7,6 +7,7 @@ import Cast from '../../components/DataSheet/Cast';
 import Carrousel from '../../components/Carrousel/Carrousel';
 import { redirectIfLoggedOut } from '../../functions';
 import { BeatLoader } from 'react-spinners';
+import Seasons from '../../components/DataSheet/Seasons';
 
 function Tv() {
 	redirectIfLoggedOut();
@@ -33,7 +34,8 @@ function Tv() {
 				<>
 					<HeaderContent content={content} mediaType={'tv'} />
 					<main className="container">
-						<DataSheet content={content} />
+						<DataSheet content={content} mediaType={'tv'} />
+						<Seasons content={content} />
 						<Cast content={content} mediaType={'tvs'} />
 					</main>
 					<Carrousel

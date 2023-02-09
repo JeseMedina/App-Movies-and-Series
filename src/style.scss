@@ -298,6 +298,33 @@ main {
 		}
 	}
 
+	.seasons {
+		padding: 1.875rem 0 0;
+		text-decoration: none;
+
+		.seasons-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+			grid-gap: 1rem;
+			margin-top: 2rem;
+
+			.season {
+				text-decoration: none;
+				color: $white;
+				border: $white solid 1px;
+				border-radius: 0.625rem;
+				padding: 1rem;
+				text-align: center;
+				transition: 0.3s ease all;
+
+				&:hover {
+					transform: scale(1.02);
+					box-shadow: 0 0.5rem 1rem 0 rgba($color: $white, $alpha: 0.2);
+				}
+			}
+		}
+	}
+
 	.cast {
 		padding: 1.875rem 0 0;
 
@@ -311,6 +338,7 @@ main {
 				text-decoration: none;
 				color: $white;
 				border-radius: 2rem;
+				transition: 0.3s ease all;
 
 				&:hover {
 					box-shadow: 0 0.5rem 1rem 0 rgba($color: $white, $alpha: 0.2);
@@ -364,7 +392,7 @@ main {
 					padding: 0 0.35rem;
 					div {
 						img {
-							border-radius: 0.1rem;
+							border-radius: 0.5rem;
 							cursor: pointer;
 							transition: 0.3s ease all;
 							z-index: 10;
