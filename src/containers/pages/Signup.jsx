@@ -32,16 +32,26 @@ function Signup() {
 					<h1>SignUp</h1>
 					{error && <p className="error">{error}</p>}
 					<div className="form-element">
-						<label>User</label>
-						<input type="text" value={user} onChange={e => setUsuario(e.target.value)} />
+						<label>
+							User
+							<input type="text" value={user} onChange={e => setUsuario(e.target.value)} />
+						</label>
 					</div>
 					<div className="form-element">
-						<label>Password</label>
-						<input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+						<label>
+							Password
+							<input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+						</label>
 					</div>
 					<div className="form-element">
-						<label>Repeat Password</label>
-						<input type="password" value={password2} onChange={e => setPassword2(e.target.value)} />
+						<label>
+							Repeat Password
+							<input
+								type="password"
+								value={password2}
+								onChange={e => setPassword2(e.target.value)}
+							/>
+						</label>
 					</div>
 					<div className="form-element">
 						<button onClick={handleSignup}>

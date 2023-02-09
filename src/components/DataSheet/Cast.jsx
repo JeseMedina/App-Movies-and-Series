@@ -1,6 +1,6 @@
 function Cast({ content }) {
 	const cast = content.credits.cast;
-
+	const IMAGE_PLACEHOLDER = '../../../public/placeholder.png';
 	const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 	return (
 		<>
@@ -10,7 +10,7 @@ function Cast({ content }) {
 					{cast.slice(0, 12).map(item => {
 						let img;
 						if (item.profile_path === null) {
-							img = 'https://uaf.edu/experts/images/placeholder.png';
+							img = IMAGE_PLACEHOLDER;
 						} else {
 							img = IMG_URL + item.profile_path;
 						}

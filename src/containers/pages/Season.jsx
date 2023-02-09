@@ -44,6 +44,7 @@ function Season() {
 							<img
 								loading="lazy"
 								src={`https://www.themoviedb.org/t/p/w500${season.poster_path}`}
+								alt={season.name}
 							/>
 						</div>
 						<div className="episodes">

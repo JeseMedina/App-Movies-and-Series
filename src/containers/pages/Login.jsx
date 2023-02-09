@@ -35,12 +35,16 @@ function Login() {
 					<h1>Login</h1>
 					{error && <p className="error">{error}</p>}
 					<div className="form-element">
-						<label>User</label>
-						<input type="text" value={user} onChange={e => setUsuario(e.target.value)} />
+						<label>
+							User
+							<input type="text" value={user} onChange={e => setUsuario(e.target.value)} />
+						</label>
 					</div>
 					<div className="form-element">
-						<label>Password</label>
-						<input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+						<label>
+							Password
+							<input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+						</label>
 					</div>
 					<div className="form-element">
 						<button onClick={handleSubmit}>

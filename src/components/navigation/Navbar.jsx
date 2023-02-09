@@ -30,7 +30,7 @@ function Navbar() {
 					</NavLink>
 				</nav>
 				<div className="user">
-					<a className="userName">{userName}</a>
+					<span className="userName">{userName}</span>
 					<button onClick={handleLogout}>LogOut</button>
 				</div>
 			</div>
