@@ -1,6 +1,6 @@
 function Cast({ content }) {
 	const cast = content.credits.cast;
-	const IMAGE_PLACEHOLDER = '../../../public/placeholder.png';
+	const IMAGE_PLACEHOLDER = '../../../public/placeholder.jpg';
 	const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 	return (
 		<>
