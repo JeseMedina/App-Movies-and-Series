@@ -26,7 +26,7 @@ function Navbar() {
 						WatchList
 					</NavLink>
 					<NavLink to="/search" className="nav-link">
-						Serch
+						Search
 					</NavLink>
 				</nav>
 				<div className="user">
