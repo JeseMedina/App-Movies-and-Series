@@ -28,7 +28,7 @@ Además, aprendí que las imágenes deben cargarse en 'lazy' para mejorar la vel
 
 - [skajese@gmail.com](skajese@gmail.com)
 - [LinkedIn](https://www.linkedin.com/in/jesemedina/?original_referer=)
-- [Porfolio web]()
+- [Porfolio web](https://jesemedina.netlify.app/)
 
 ## Licencia
 
