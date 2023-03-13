@@ -33,4 +33,4 @@ Además, aprendí que las imágenes deben cargarse en 'lazy' para mejorar la vel
 ## Licencia
 
 MIT Public License v3.0
-No puede usarse comencialmente.
+No puede usarse comercialmente.
