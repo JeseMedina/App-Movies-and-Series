@@ -1,0 +1,43 @@
+@import '../../styles/global.scss';
+
+.cast {
+	padding: 1.875rem 0 0;
+
+	.cards {
+		display: grid;
+		gap: 0.6rem;
+		grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+
+		.card {
+			width: 100%;
+			text-decoration: none;
+			color: $white;
+			border-radius: 0.5rem;
+			transition: 0.3s ease all;
+
+			&:hover {
+				box-shadow: 0 0.5rem 1rem 0 rgba($color: $white, $alpha: 0.2);
+			}
+
+			img {
+				width: 100%;
+				transition: 0.3s;
+				border-radius: 0.5rem 0.5rem 0 0;
+			}
+
+			.cardContainer {
+				padding: 1rem 1rem;
+				text-align: center;
+
+				.actor {
+					font-weight: 600;
+					padding: 0.5rem;
+				}
+
+				.character {
+					color: $gray;
+				}
+			}
+		}
+	}
+}

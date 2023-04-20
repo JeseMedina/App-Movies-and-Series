@@ -1,0 +1,86 @@
+@import '../../styles/global.scss';
+
+header {
+	padding: 0.938rem 0;
+	background-color: $black;
+	position: sticky;
+	top: 0.006rem;
+	z-index: 100;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding: 0 3%;
+		margin: auto;
+		nav {
+			a {
+				color: $gray;
+				text-decoration: none;
+				margin-right: 1.25rem;
+				cursor: pointer;
+
+				&:hover,
+				&.active {
+					color: $white;
+				}
+			}
+		}
+
+		.user {
+			font-size: 1.5rem;
+			cursor: pointer;
+
+			.userName {
+				color: $gray;
+				text-decoration: none;
+				margin-right: 1rem;
+				vertical-align: middle;
+
+				&:hover {
+					color: $white;
+				}
+
+				i {
+					padding-left: 1rem;
+				}
+			}
+
+			button {
+				padding: 0.2rem;
+				border: 0.1rem solid $white;
+				background-color: $black;
+				color: $white;
+				font-size: 1.125rem;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+@media (max-width: 553px) {
+	header {
+		position: static;
+		.container {
+			flex-direction: column;
+			nav {
+				display: flex;
+				flex-direction: column;
+				align-content: center;
+				margin: 0 auto;
+				text-align: center;
+				a {
+					margin: auto;
+					margin-top: 0.5rem;
+				}
+			}
+			.user {
+				margin-top: 0.5rem;
+				.userName {
+					display: none;
+				}
+			}
+		}
+	}
+}

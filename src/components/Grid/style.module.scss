@@ -1,0 +1,23 @@
+@import '../../styles/global.scss';
+
+.header {
+	padding: 0 3%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem calc($img-gap * 2 + $handle-size);
+	align-items: center;
+
+	.title {
+		font-size: 2.5rem;
+		margin: 0;
+		padding: 0;
+		padding: 0.5rem 0;
+	}
+}
+
+.grid {
+	display: grid;
+	gap: 0.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+	padding: 0.5rem 3.5rem;
+}

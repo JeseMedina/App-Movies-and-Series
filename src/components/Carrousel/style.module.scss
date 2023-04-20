@@ -1,0 +1,21 @@
+@import '../../styles/global.scss';
+
+.row {
+	.header {
+		padding: 0 3%;
+		display: flex;
+		justify-content: space-between;
+		padding: 0.5rem calc($img-gap * 2 + $handle-size);
+		align-items: center;
+
+		.title {
+			font-size: 2rem;
+			margin: 0;
+			padding: 0;
+			padding: 0.5rem 0;
+		}
+	}
+	.carrousel {
+		padding: 0 3%;
+	}
+}

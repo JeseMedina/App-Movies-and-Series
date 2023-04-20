@@ -1,0 +1,38 @@
+$black: #141414;
+$white: #fff;
+$gray: #aaa;
+
+$itemGrow: 1.2;
+$duration: 250ms;
+$handle-size: 3rem;
+$img-gap: 0.25rem;
+
+@mixin small {
+	@media only screen and (min-width: 600px) {
+		@content;
+	}
+}
+
+@mixin medium {
+	@media only screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media only screen and (min-width: 1440px) {
+		@content;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $black;
+	font-family: 'Open Sans', sans-serif;
+	color: $white;
+}

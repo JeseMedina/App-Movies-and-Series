@@ -1,0 +1,50 @@
+@import '../../styles/global.scss';
+
+.info {
+	padding: 1.875rem 0 0;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 1rem;
+
+	.dataSheet {
+		width: 45%;
+		h2 {
+			width: 100%;
+		}
+		.details {
+			display: grid;
+			gap: 0.5rem;
+			grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+
+			.dataTitle {
+				font-weight: bold;
+			}
+
+			.dataDescription {
+				color: $gray;
+				padding: 0.5rem 0;
+			}
+		}
+	}
+
+	.synopsis {
+		width: 50%;
+	}
+}
+
+@media (max-width: 553px) {
+	.info {
+		flex-direction: column;
+		align-content: center;
+
+		.synopsis {
+			width: 100%;
+			padding-bottom: 1.5rem;
+		}
+
+		.data-sheet {
+			width: 100%;
+		}
+	}
+}

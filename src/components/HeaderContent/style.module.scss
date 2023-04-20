@@ -1,0 +1,78 @@
+@import '../../styles/global.scss';
+
+.selectedMovie {
+	font-size: 1rem;
+	min-height: 40.62rem;
+	color: $white;
+	display: flex;
+	align-items: end;
+	background-position: center center;
+	background-size: cover;
+
+	.container {
+		width: 100%;
+		padding: 0 3%;
+		margin: auto;
+		margin: 0 auto;
+		margin-bottom: 2rem;
+
+		.title {
+			font-weight: 600;
+			font-size: 3.12rem;
+			margin: 0.4rem 0;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.buttons {
+			display: flex;
+			justify-content: space-between;
+
+			.button {
+				background: rgba(0, 0, 0, 0.5);
+				border: none;
+				border-radius: 0.31rem;
+				padding: 0.93rem 1.87rem;
+				color: $white;
+				margin-right: 1.25rem;
+				cursor: pointer;
+				transition: 0.3s ease all;
+				font-size: 1.25rem;
+
+				&:hover {
+					background: $white;
+					color: $black;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.selectedMovie .description {
+		min-width: 100%;
+	}
+}
+
+@media (max-width: 553px) {
+	.selectedMovie .container {
+		.title {
+			margin-top: 1rem;
+			text-align: center;
+		}
+
+		.buttons {
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+
+			.button {
+				margin-top: 0.5rem;
+				display: inline-block;
+				text-align: center;
+			}
+		}
+	}
+}

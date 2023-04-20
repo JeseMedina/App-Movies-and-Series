@@ -1,0 +1,18 @@
+@import '../../styles/global.scss';
+
+.footer {
+	width: 100%;
+	padding: 0 3%;
+	margin: auto;
+	bottom: 0;
+	padding: 2rem 0 0.625rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	.copyright {
+		color: $white;
+		font-size: 0.688rem;
+		margin-bottom: 0.938rem;
+	}
+}
