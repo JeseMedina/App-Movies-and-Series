@@ -6,8 +6,10 @@ import style from './style.module.scss';
 import { BeatLoader } from 'react-spinners';
 import { useQuery } from 'react-query';
 import { Episode } from '../../../interfaces/Media';
+import { redirectIfLoggedOut } from '../../../functions';
 
 function Season() {
+	redirectIfLoggedOut();
 	const params = useParams<{ tv_id: string; season_id: string }>();
 	const tvId = params.tv_id;
 	const seasonId = params.season_id;

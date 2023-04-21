@@ -9,8 +9,10 @@ import { BeatLoader } from 'react-spinners';
 import { Media } from '../../../interfaces/Media';
 import axios from 'axios';
 import style from './style.module.scss';
+import { redirectIfLoggedOut } from '../../../functions';
 
 function Movie(): JSX.Element {
+	redirectIfLoggedOut();
 	const params = useParams<{ movie_id: string }>();
 	const id = params.movie_id;
 	const {

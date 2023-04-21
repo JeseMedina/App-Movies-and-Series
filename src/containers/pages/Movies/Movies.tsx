@@ -5,8 +5,10 @@ import axios from 'axios';
 import style from './style.module.scss';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useInfiniteQuery } from 'react-query';
+import { redirectIfLoggedOut } from '../../../functions';
 
 function Movies(): JSX.Element {
+	redirectIfLoggedOut();
 	const { data, isLoading, hasNextPage, fetchNextPage } = useInfiniteQuery(
 		['movies'],
 		async ({ pageParam = 1 }) => {

@@ -6,8 +6,10 @@ import axios from 'axios';
 import style from './style.module.scss';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useInfiniteQuery } from 'react-query';
+import { redirectIfLoggedOut } from '../../../functions';
 
 function Search(): JSX.Element {
+	redirectIfLoggedOut();
 	const [search, setSearch] = useState<string>('');
 	const inputRef = useRef<HTMLInputElement>(null);
 	// const inputRef = useRef<HTMLInputElement>(null);

@@ -1,8 +1,10 @@
 import Layout from '../../Layout';
 import HeaderHome from '../../../components/HeaderHome';
 import Carrousel from '../../../components/Carrousel';
+import { redirectIfLoggedOut } from '../../../functions';
 
 function Home(): JSX.Element {
+    redirectIfLoggedOut();
 	return (
 		<Layout>
 			<HeaderHome />

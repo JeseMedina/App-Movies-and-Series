@@ -10,8 +10,10 @@ import Seasons from '../../../components/Seasons';
 import { Media } from '../../../interfaces/Media';
 import axios from 'axios';
 import style from './style.module.scss';
+import { redirectIfLoggedOut } from '../../../functions';
 
 function Tv() {
+	redirectIfLoggedOut();
 	const params = useParams<{ tv_id: string }>();
 	const id = params.tv_id;
 

@@ -3,13 +3,15 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import style from './style.module.scss';
+import { redirectIfLoggedOut } from '../../../functions';
 
 function Signup() {
+	redirectIfLoggedOut();
 	const [user, setUsuario] = useState<string>('');
 	const [password, setPassword] = useState<string>('');
 	const [password2, setPassword2] = useState<string>('');
 	const [error, setError] = useState<string>('');
-
+	const navigate = useNavigate();
 	const watchList: string[] = [];
 
 	const handleSignup = (): void => {
@@ -17,8 +19,6 @@ function Signup() {
 			setError('Fill in all the fields');
 			return;
 		}
-
-		const navigate = useNavigate();
 
 		if (password === password2) {
 			localStorage.setItem('users', JSON.stringify({ user, password, watchList }));

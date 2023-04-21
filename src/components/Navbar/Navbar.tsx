@@ -1,9 +1,8 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import { capitalizeFirstLetter, redirectIfLoggedOut } from '../../functions';
+import { capitalizeFirstLetter} from '../../functions';
 import style from './style.module.scss';
 
 function Navbar() {
-	redirectIfLoggedOut();
 	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 	const userName = capitalizeFirstLetter(JSON.parse(localStorage.getItem('users')!).user);
 

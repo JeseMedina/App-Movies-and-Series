@@ -34,9 +34,8 @@ export function getDate(content: Media): string | undefined {
 
 export function redirectIfLoggedOut(): boolean {
 	const navigate = useNavigate();
-	const isLoggedIn =
-		sessionStorage.getItem('isLoggedIn') && sessionStorage.getItem('isLoggedIn') === 'true';
-	if (!isLoggedIn) {
+	const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
+	if (isLoggedIn === false) {
 		navigate('/login');
 		return false;
 	}
