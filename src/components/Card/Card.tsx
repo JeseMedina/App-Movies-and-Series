@@ -8,7 +8,7 @@ function Card({ item, url }: { item: Media; url: string }) {
 
 	return (
 		<Link to={url}>
-			<img width={230} height={345} className={style.img} src={imageUrl} alt={title} />
+			<img src={imageUrl} alt={title} width={230} height={345} className={style.img} />
 		</Link>
 	);
 }

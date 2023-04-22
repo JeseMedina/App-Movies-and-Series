@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import { capitalizeFirstLetter} from '../../functions';
+import { capitalizeFirstLetter } from '../../functions';
 import style from './style.module.scss';
 
 function Navbar() {
@@ -16,21 +16,11 @@ function Navbar() {
 		<header>
 			<div className={style.container}>
 				<nav>
-					<NavLink to="/">
-						Home
-					</NavLink>
-					<NavLink to="/movies">
-						Movies
-					</NavLink>
-					<NavLink to="/tvs">
-						Tvs
-					</NavLink>
-					<NavLink to="/watchlist">
-						WatchList
-					</NavLink>
-					<NavLink to="/search">
-						Search
-					</NavLink>
+					<NavLink to="/">Home</NavLink>
+					<NavLink to="/movies">Movies</NavLink>
+					<NavLink to="/tvs">Tvs</NavLink>
+					<NavLink to="/watchlist">WatchList</NavLink>
+					<NavLink to="/search">Search</NavLink>
 				</nav>
 				<div className={style.user}>
 					<span className={style.userName}>{userName}</span>
