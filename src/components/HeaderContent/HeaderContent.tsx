@@ -3,12 +3,7 @@ import { faPlusCircle, faPlay } from '@fortawesome/free-solid-svg-icons';
 import style from './style.module.scss';
 import { MediaHeader } from '../../interfaces/Media';
 
-interface Props {
-	content: MediaHeader;
-	mediaType: string;
-}
-
-function HeaderContent({ content, mediaType }: Props) {
+function HeaderContent({ content, mediaType }: { content: MediaHeader; mediaType: string }) {
 	const poster = `https://www.themoviedb.org/t/p/w1280${content.backdrop_path}`;
 
 	const handleAddToWatchList = () => {

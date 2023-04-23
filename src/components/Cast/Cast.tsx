@@ -1,39 +1,71 @@
-import { Media } from '../../interfaces/Media';
+import { Media, Cast as CastI } from '../../interfaces/Media';
 import style from './style.module.scss';
+import Slider, { Settings } from 'react-slick';
+import CardCast from '../CardCast';
 
-interface Props {
-	content: Media;
-}
+const settings: Settings = {
+	dots: false,
+	speed: 500,
+	slidesToShow: 8,
+	slidesToScroll: 8,
+	initialSlide: 0,
+	responsive: [
+		{
+			breakpoint: 1500,
+			settings: {
+				slidesToShow: 6,
+				slidesToScroll: 6,
+			},
+		},
+		{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 4,
+				slidesToScroll: 4,
+			},
+		},
+		{
+			breakpoint: 900,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+			},
+		},
+		{
+			breakpoint: 700,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+			},
+		},
+		{
+			breakpoint: 400,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			},
+		},
+	],
+	lazyLoad: 'ondemand',
+};
 
-function Cast({ content }: Props): JSX.Element {
+function Cast({ content }: { content: Media }): JSX.Element {
 	const cast = content.credits?.cast;
-	const IMAGE_PLACEHOLDER = '../../../placeholder.jpg';
-	const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
 	return (
 		<>
-			<div className={style.cast}>
-				<h2>Cast</h2>
-				<div className={style.cards}>
-					{cast &&
-						cast.slice(0, 12).map(item => {
-							let img: string;
-							if (item.profile_path === null) {
-								img = IMAGE_PLACEHOLDER;
-							} else {
-								img = IMG_URL + item.profile_path;
-							}
-
-							return (
-								<div className={style.card} key={item.id}>
-									<img src={img} alt={item.name} />
-									<div className={style.cardContainer}>
-										<p className={style.actor}>{item.name}</p>
-										<p className={style.character}>{item.character}</p>
-									</div>
-								</div>
-							);
-						})}
+			<div className={style.row}>
+				<div className={style.header}>
+					<h2 className={style.title}>Cast</h2>
+				</div>
+				<div className={style.carrousel}>
+					<Slider {...settings}>
+						{cast &&
+							cast.map((item: CastI) => {
+								const id = item.id;
+								return item.profile_path && <CardCast key={id} item={item} />;
+							})}
+					</Slider>
 				</div>
 			</div>
 		</>

@@ -49,10 +49,10 @@ function Tv() {
 				<>
 					<HeaderContent content={content} mediaType={'tv'} />
 					<main className={style.container}>
-						<DataSheet content={content} mediaType={'tv'} />
+						<DataSheet content={content} />
 						<Seasons content={content} />
-						<Cast content={content} />
 					</main>
+					<Cast content={content} />
 					<Carrousel
 						name={'Similar'}
 						link={`https://api.themoviedb.org/3/tv/${id}/similar`}
@@ -60,7 +60,6 @@ function Tv() {
 					/>
 				</>
 			)}
-			;
 		</Layout>
 	);
 }

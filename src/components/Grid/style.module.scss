@@ -1,7 +1,6 @@
 @import '../../styles/global.scss';
 
 .header {
-	padding: 0 3%;
 	display: flex;
 	justify-content: space-between;
 	padding: 0.5rem calc($img-gap * 2 + $handle-size);

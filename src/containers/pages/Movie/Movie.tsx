@@ -47,9 +47,9 @@ function Movie(): JSX.Element {
 				<>
 					<HeaderContent content={content} mediaType={'movie'} />
 					<main className={style.container}>
-						<DataSheet content={content} mediaType={'movies'} />
-						<Cast content={content} />
+						<DataSheet content={content} />
 					</main>
+					<Cast content={content} />
 					<Carrousel
 						name={'Similar'}
 						link={`https://api.themoviedb.org/3/movie/${id}/similar`}
