@@ -16,11 +16,21 @@ function Navbar() {
 		<header>
 			<div className={style.container}>
 				<nav>
-					<NavLink to="/">Home</NavLink>
-					<NavLink to="/movies">Movies</NavLink>
-					<NavLink to="/tvs">Tvs</NavLink>
-					<NavLink to="/watchlist">WatchList</NavLink>
-					<NavLink to="/search">Search</NavLink>
+					<NavLink to="/" className={({ isActive  }) => (isActive ? style.active : '')}>
+						Home
+					</NavLink>
+					<NavLink to="/movies" className={({ isActive  }) => (isActive ? style.active : '')}>
+						Movies
+					</NavLink>
+					<NavLink to="/tvs" className={({ isActive  }) => (isActive ? style.active : '')}>
+						Tvs
+					</NavLink>
+					<NavLink to="/watchlist" className={({ isActive  }) => (isActive ? style.active : '')}>
+						WatchList
+					</NavLink>
+					<NavLink to="/search" className={({ isActive  }) => (isActive ? style.active : '')}>
+						Search
+					</NavLink>
 				</nav>
 				<div className={style.user}>
 					<span className={style.userName}>{userName}</span>

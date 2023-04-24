@@ -22,8 +22,12 @@ header {
 				cursor: pointer;
 
 				&:hover {
-					color: $white;
-				}
+          color: $white;
+        }
+
+        &.active {
+					color: rgba($color: $white, $alpha: .9);
+        }
 			}
 		}
 
@@ -37,8 +41,7 @@ header {
 				margin-right: 1rem;
 				vertical-align: middle;
 
-				&:hover,
-				.active {
+				&:hover{
 					color: $white;
 				}
 
