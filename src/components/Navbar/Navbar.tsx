@@ -16,19 +16,19 @@ function Navbar() {
 		<header>
 			<div className={style.container}>
 				<nav>
-					<NavLink to="/" className={({ isActive  }) => (isActive ? style.active : '')}>
+					<NavLink to="/" className={({ isActive }) => (isActive ? style.active : '')}>
 						Home
 					</NavLink>
-					<NavLink to="/movies" className={({ isActive  }) => (isActive ? style.active : '')}>
+					<NavLink to="/movies" className={({ isActive }) => (isActive ? style.active : '')}>
 						Movies
 					</NavLink>
-					<NavLink to="/tvs" className={({ isActive  }) => (isActive ? style.active : '')}>
+					<NavLink to="/tvs" className={({ isActive }) => (isActive ? style.active : '')}>
 						Tvs
 					</NavLink>
-					<NavLink to="/watchlist" className={({ isActive  }) => (isActive ? style.active : '')}>
+					<NavLink to="/watchlist" className={({ isActive }) => (isActive ? style.active : '')}>
 						WatchList
 					</NavLink>
-					<NavLink to="/search" className={({ isActive  }) => (isActive ? style.active : '')}>
+					<NavLink to="/search" className={({ isActive }) => (isActive ? style.active : '')}>
 						Search
 					</NavLink>
 				</nav>
