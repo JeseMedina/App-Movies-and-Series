@@ -5,6 +5,8 @@ import style from './style.module.scss';
 function Navbar() {
 	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 	const userName = capitalizeFirstLetter(JSON.parse(localStorage.getItem('users')!).user);
+	const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+	console.log(isLoggedIn);
 
 	const navigate = useNavigate();
 	const handleLogout = () => {
@@ -33,8 +35,14 @@ function Navbar() {
 					</NavLink>
 				</nav>
 				<div className={style.user}>
-					<span className={style.userName}>{userName}</span>
-					<button onClick={handleLogout}>LogOut</button>
+					{isLoggedIn === 'true' ? <>
+						<span className={style.userName}>{userName}</span>
+						<button onClick={handleLogout}>LogOut</button>
+						</>
+					 : <>
+						<button onClick={handleLogout}>LogIn</button>
+					</>
+					}
 				</div>
 			</div>
 		</header>

@@ -41,7 +41,6 @@ function Movie(): JSX.Element {
 
 	if (error) return <></>;
 
-	console.log(content);
 	return (
 		<Layout>
 			{content && (

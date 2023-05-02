@@ -80,8 +80,12 @@ header {
 			}
 			.user {
 				margin-top: 0.5rem;
+				display: flex;
+				flex-direction: column;
+				align-content: center;
+				gap: 0.5rem;
 				.userName {
-					display: none;
+					margin: auto;
 				}
 			}
 		}
