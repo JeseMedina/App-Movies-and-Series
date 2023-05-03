@@ -2,10 +2,9 @@
 
 .row {
 	.header {
-		padding: 0 3%;
 		display: flex;
 		justify-content: space-between;
-		padding: 0.5rem calc($img-gap * 2 + $handle-size);
+		padding: 0.5rem 3%;
 		align-items: center;
 
 		.title {

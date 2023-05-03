@@ -2,12 +2,7 @@ import { getDate } from '../../functions';
 import { Media } from '../../interfaces/Media';
 import style from './style.module.scss';
 
-interface Props {
-	content: Media;
-	mediaType: string;
-}
-
-function DataSheet({ content }: Props): JSX.Element {
+function DataSheet({ content }: { content: Media }): JSX.Element {
 	const clasification =
 		content.release_dates &&
 		content.release_dates.results.find(item => item.iso_3166_1 === 'US')?.release_date[0]
@@ -35,10 +30,14 @@ function DataSheet({ content }: Props): JSX.Element {
 							<div className={style.dataTitle}>Release</div>
 							<div className={style.dataDescription}>{getDate(content)}</div>
 						</div>
-						<div>
-							<div className={style.dataTitle}>Qualification (TMDB)</div>
-							<div className={style.dataDescription}>{content.vote_average.toFixed(1) + '/10'}</div>
-						</div>
+						{content.vote_average && (
+							<div>
+								<div className={style.dataTitle}>Qualification (TMDB)</div>
+								<div className={style.dataDescription}>
+									{content.vote_average.toFixed(1) + '/10'}
+								</div>
+							</div>
+						)}
 						{clasification && (
 							<div>
 								<div className={style.dataTitle}>Clasification</div>

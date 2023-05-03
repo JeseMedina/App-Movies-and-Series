@@ -12,7 +12,6 @@ function Search(): JSX.Element {
 	redirectIfLoggedOut();
 	const [search, setSearch] = useState<string>('');
 	const inputRef = useRef<HTMLInputElement>(null);
-	// const inputRef = useRef<HTMLInputElement>(null);
 	const { data, isLoading, hasNextPage, fetchNextPage } = useInfiniteQuery(
 		['search', search],
 		async ({ pageParam = 1 }) => {
@@ -62,7 +61,7 @@ function Search(): JSX.Element {
 				/>
 				{search && <button onClick={clearSearch}>X</button>}
 			</div>
-			{search && content.length > 0 && (
+			{search && content.length > 0 ? (
 				<InfiniteScroll
 					dataLength={content.length}
 					hasMore={hasNextPage || isLoading}
@@ -75,7 +74,9 @@ function Search(): JSX.Element {
 				>
 					<GridSearch content={content} />
 				</InfiniteScroll>
-			)}
+			) : null}
+			{!search && <div className={style.message}>Please enter a search query</div>}
+			{search && content.length === 0 && <div className={style.message}>No results found.</div>}
 		</Layout>
 	);
 }

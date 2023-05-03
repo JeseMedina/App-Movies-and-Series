@@ -1,13 +1,8 @@
 import { Link } from 'react-router-dom';
-import { FC } from 'react';
 import { Media } from '../../interfaces/Media';
 import style from './style.module.scss';
 
-interface SeasonsProps {
-	content: Media;
-}
-
-const Seasons: FC<SeasonsProps> = ({ content }) => {
+function Seasons({ content }: { content: Media }): JSX.Element {
 	return (
 		<div className={style.seasons}>
 			<h2>Seasons</h2>
@@ -25,6 +20,6 @@ const Seasons: FC<SeasonsProps> = ({ content }) => {
 			</div>
 		</div>
 	);
-};
+}
 
 export default Seasons;

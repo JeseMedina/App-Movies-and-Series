@@ -4,7 +4,7 @@ import Carrousel from '../../../components/Carrousel';
 import { redirectIfLoggedOut } from '../../../functions';
 
 function Home(): JSX.Element {
-    redirectIfLoggedOut();
+	redirectIfLoggedOut();
 	return (
 		<Layout>
 			<HeaderHome />
